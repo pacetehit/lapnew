@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LAP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="jquery/jquery-3.6.1.min.js"></script>
+    <!-- <script src="app.js"></script> -->
+  </head>
+  <body>
+    <section>
+      <div class="container px-3">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h5 class="fw-bold text-warning">Laporan Apel Pagi ( LAP )</h5>
+            <h5 class="fw-bold text-warning border-bottom border-warning pb-2">
+              Sorong Selatan
+            </h5>
+          </div>
+        </div>
+        <form action="" method="post">
+          <!-- tanggal -->
+          <div class="row my-3">
+            <p id="demo" class="fw-bold"></p>
+          </div>
+          <!-- akhir tanggal -->
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <p class="fw-bold text-warning">Hadir & tidak Hadir :</p>
+              <div class="mb-3">
+                <label for="jmlPegawai" class="form-label"
+                  >Jumlah Pegawai</label
+                >
+                <input
+                  type="number"
+                  name="jml_pegawai"
+                  class="form-control"
+                  id="jmlPegawai"
+                  onkeyup="kurang()"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="hadir" class="form-label">Hadir</label>
+                <input
+                  type="number"
+                  name="hadir"
+                  class="form-control"
+                  id="hadir"
+                  onkeyup="kurang()"
+                  aria-describedby="hadir"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="tidakHadir" class="form-label">Tidak Hadir</label>
+                <input
+                  type="number"
+                  name="tidak_hadir"
+                  class="form-control"
+                  id="tidakHadir"
+                  onkeyup="kurang()"
+                  aria-describedby="tidakHadir"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <p class="fw-bold text-warning">Keterangan :</p>
+              <div class="mb-3">
+                <label for="dl" class="form-label">Dinas Luar</label>
+                <input
+                  type="number"
+                  name="dinas_luar"
+                  class="form-control"
+                  id="dl"
+                  onkeyup="keterangan()"
+                  aria-describedby="dl"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="ijin" class="form-label">Ijin</label>
+                <input
+                  type="number"
+                  name="ijin"
+                  class="form-control"
+                  id="ijin"
+                  onkeyup="keterangan()"
+                  aria-describedby="ijin"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="sakit" class="form-label">Sakit</label>
+                <input
+                  type="number"
+                  name="sakit"
+                  class="form-control"
+                  id="sakit"
+                  onkeyup="keterangan()"
+                  aria-describedby="sakit"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="jmlDlIjinSakit" class="form-label"
+                  >Jumlah DL + Ijin + Sakit</label
+                >
+                <input
+                  type="number"
+                  name="jmlDlIjinSakit"
+                  class="form-control"
+                  id="jmlDlIjinSakit"
+                  onkeyup="keterangan()"
+                  aria-describedby="jmlDlIjinSakit"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="tanpaKet"
+                  class="form-label text-warning fw-bold enable"
+                  >Tanpa Keterangan</label
+                >
+                <input
+                  type="number"
+                  name="tanpa_ket"
+                  class="form-control"
+                  id="tanpaKet"
+                  onkeyup="hasilnya()"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footgue text-bg-warning">
+      <p class="text-center p-3">
+        copyright
+        <a class="text-decoration-none text-primary fw-bold" href="#"
+          >@pace_tehit</a
+        >
+        2022
+      </p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="waktu.js"></script>
+    <script src="tes.js"></script>
+  </body>
+</html>
